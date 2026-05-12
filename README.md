@@ -26,3 +26,4 @@ A Library Management System developed using Java and object-oriented programming
 ## Purpose
 This project was created to practice Java programming and apply OOP concepts in building a management system.
 
+![borrow book](images/borrow_book.JPG)
