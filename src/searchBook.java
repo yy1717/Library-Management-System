@@ -50,7 +50,7 @@ public class searchBook extends JFrame{
             return;
         }
         
-        File file = new File("books.txt");
+        File file = new File("data/books.txt");
         if(!file.exists()){
             JOptionPane.showMessageDialog(this, "books.txt not found.", "File Error", JOptionPane.ERROR_MESSAGE);
             return;
