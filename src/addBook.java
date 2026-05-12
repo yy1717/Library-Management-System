@@ -52,7 +52,7 @@ public class addBook extends JFrame {
                     JOptionPane.showMessageDialog(addBook.this, "Please fill in all fields.", "Input Error", JOptionPane.ERROR_MESSAGE);
                 } else{
                     try{
-                        FileWriter fw = new FileWriter("books.txt", true);
+                        FileWriter fw = new FileWriter("data/books.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw);
                         
                         bw.write(ID + "," + title + "," + author);
@@ -83,7 +83,7 @@ public class addBook extends JFrame {
     
     private String generateNextBookID(){
         int maxID = 0;
-        File file = new File("books.txt");
+        File file = new File("data/books.txt");
         if(file.exists()){
             try(BufferedReader br = new BufferedReader(new FileReader(file))){
                 String line;
