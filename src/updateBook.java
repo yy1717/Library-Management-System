@@ -78,7 +78,7 @@ public class updateBook extends JFrame{
         titleField.setEnabled(false);
         updateButton.setEnabled(false);
         
-        try(BufferedReader br = new BufferedReader(new FileReader("books.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("data/books.txt"))){
             String line;
             int index = 0;
             while((line = br.readLine()) != null){
@@ -131,7 +131,7 @@ public class updateBook extends JFrame{
         }
         allBooks.set(foundIndex, updateLine);
         
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("books.txt"))){
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("data/books.txt"))){
             for(String book : allBooks){
                 bw.write(book);
                 bw.newLine();
