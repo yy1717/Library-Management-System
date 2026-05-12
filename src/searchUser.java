@@ -50,7 +50,7 @@ public class searchUser extends JFrame{
             return;
         }
         
-        File file = new File("user.txt");
+        File file = new File("data/user.txt");
         if(!file.exists()){
             JOptionPane.showMessageDialog(this, "user.txt not found.", "File Errro", JOptionPane.ERROR_MESSAGE);
             return;
