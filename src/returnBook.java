@@ -38,7 +38,7 @@ public class returnBook extends JFrame{
                     
                     borrowedRecords.set(index, returnedRecord);
                     
-                    try (BufferedWriter bw = new BufferedWriter(new FileWriter("borrowed.txt"))) {
+                    try (BufferedWriter bw = new BufferedWriter(new FileWriter("data/borrowed.txt"))) {
                         for (String record : borrowedRecords) {
                             bw.write(record);
                             bw.newLine();
@@ -63,7 +63,7 @@ public class returnBook extends JFrame{
     }
     
     private void loadBorrowedRecords(){
-        File file = new File("borrowed.txt");
+        File file = new File("data/borrowed.txt");
         if(!file.exists()){
             borrowList.addItem("No borrowed records.");
             return;
@@ -92,7 +92,7 @@ public class returnBook extends JFrame{
     
     private void updateFile(){
         try{
-            BufferedWriter bw = new BufferedWriter(new FileWriter("borrowed.txt", false));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("data/borrowed.txt", false));
             for(String record : borrowedRecords){
                 bw.write(record);
                 bw.newLine();
