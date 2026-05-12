@@ -28,7 +28,7 @@ public class viewBook extends JFrame
     }
     
     public void loadBooksFromFile(){
-        File file = new File("books.txt");
+        File file = new File("data/books.txt");
         if(!file.exists()){
             bookArea.setText("No books found.");
             return;
