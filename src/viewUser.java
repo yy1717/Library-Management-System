@@ -29,7 +29,7 @@ public class viewUser extends JFrame
     }
     
     private void loadUserFromFile(){
-        File file = new File("user.txt");
+        File file = new File("data/user.txt");
         if (!file.exists()){
             userArea.setText("No users found.");
             return;
