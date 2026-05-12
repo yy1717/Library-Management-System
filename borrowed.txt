@@ -1,0 +1,2 @@
+Record ID: BR1751970083379, Book: 'The Little Prince' (ID: B001), Borrower: 'Ziv' (ID: U001), Borrow Date: 2025-06-30, Status: OUT (Due: 2025-07-07)
+Record ID: BR1752111224206, Book: 'BOOK1' (ID: B004), Borrower: 'Ziv' (ID: U001), Borrow Date: 2025-07-10, Status: RETURNED (2025-07-10)
