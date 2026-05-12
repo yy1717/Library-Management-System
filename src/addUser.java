@@ -56,7 +56,7 @@ public class addUser extends JFrame
                     User user = new User(ID, name, phone);
                     
                     try{
-                        FileWriter fw = new FileWriter("User.txt", true);
+                        FileWriter fw = new FileWriter("data/User.txt", true);
                         BufferedWriter bw = new BufferedWriter(fw);
                         bw.write(ID + "," + name + "," + phone);
                         bw.newLine();
