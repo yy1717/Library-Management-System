@@ -30,7 +30,7 @@ public class viewHistory extends JFrame
     }
     
     private void loadHistoryRecords(){
-        File file = new File("borrowed.txt");
+        File file = new File("data/borrowed.txt");
         
         if(!file.exists()){
             historyArea.setText("No borrowed records found.");
