@@ -73,7 +73,7 @@ public class borrowBook extends JFrame {
                 String bookTitle = bookParts[1];
                   
 
-                try (BufferedReader br = new BufferedReader(new FileReader("borrowed.txt"))) {
+                try (BufferedReader br = new BufferedReader(new FileReader("data/borrowed.txt"))) {
                     String line;
                     while((line = br.readLine()) != null){
                         boolean isSameUser = line.contains("ID: " + userID) || line.contains("User ID: " + userID);
@@ -98,7 +98,7 @@ public class borrowBook extends JFrame {
                     String recordID = "BR" + System.currentTimeMillis();
                     BorrowingRecord record = new BorrowingRecord(recordID, bookObj, userObj, borrowDate, dueDate);
                     
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("borrowed.txt", true));
+                    BufferedWriter bw = new BufferedWriter(new FileWriter("data/borrowed.txt", true));
                     bw.write(record.toString());
                     bw.newLine();
                     bw.close();
@@ -118,7 +118,7 @@ public class borrowBook extends JFrame {
 
     private void loadUsers() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("user.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("data/User.txt"));
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -134,7 +134,7 @@ public class borrowBook extends JFrame {
 
     private void loadBooks() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("books.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("data/books.txt"));
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
